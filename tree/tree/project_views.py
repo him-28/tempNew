@@ -39,9 +39,9 @@ def load(request, addr):
     if node['slug'] == tree[-1]:
             
             if node['kind'] == 'Topic':
-                return render(request, 'proj.html', {'title': node['title'], 'node': node, 'randcolor':x})
+                return render(request, 'parent.html', {'title': node['title'], 'node': node, 'randcolor':x})
             else:
-                return render(request, 'pro.html', {'title': node['title'], 'node': node ,  'randcolor':x})
+                return render(request, 'child.html', {'title': node['title'], 'node': node ,  'randcolor':x})
     else:
             return HttpResponse("Invalid Url")
 
