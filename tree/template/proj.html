@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html> 
+<head>
+<link rel="stylesheet" type="text/css" href = "{{ MEDIA_URL }}root.css">  
+</head>
+
+<title>
+{{title}}
+</title> 
+
+<body bgcolor='{{ randcolor }}' >
+
+<h1> 
+<nav >
+         <pre >
+{{title}} 
+</h1> 
+
+
+         
+	{% for child in node.children %}
+	
+         
+	          
+	<a href="{{child.slug}}" style="text-decoration:none"> 
+	{{child.title}} &nbsp;&nbsp;&nbsp;
+	</a>       
+        </pre>
+        </nav> 
+        
+        
+	{% endfor %}
+
+	
+	
+
+
+</body>
+
+</html>
+
